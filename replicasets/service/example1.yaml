@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ex1-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: web
+  ports:
+    - name: web
+      port: 80
+      targetPort: 80
+      protocol: TCP
